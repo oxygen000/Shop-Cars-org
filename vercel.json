@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "npx nx build shop && npx nx build admin && mkdir -p dist/shop dist/admin && cp -r apps/shop/dist/* dist/shop/ && cp -r apps/admin/dist/* dist/admin/",
+  "buildCommand": "npx nx build shop && npx nx build admin && mkdir -p dist/shop dist/admin && cp -r apps/shop/build/client/* dist/shop/ && cp -r apps/admin/build/client/* dist/admin/",
   "outputDirectory": "dist",
   "framework": "vite",
   "rewrites": [

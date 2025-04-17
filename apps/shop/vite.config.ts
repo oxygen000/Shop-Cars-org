@@ -2,9 +2,9 @@
 import { defineConfig } from 'vite';
 import { reactRouter } from '@react-router/dev/vite';
 
-export default defineConfig(() => ({
+export default defineConfig(({ mode }) => ({
   root: __dirname,
-  base: '/shop/',
+  base: mode === 'production' ? '/shop/' : '/',
   cacheDir: '../../node_modules/.vite/apps/shop',
   server: {
     port: 4200,
