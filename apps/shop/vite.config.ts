@@ -4,6 +4,7 @@ import { reactRouter } from '@react-router/dev/vite';
 
 export default defineConfig(() => ({
   root: __dirname,
+  base: '/shop/',
   cacheDir: '../../node_modules/.vite/apps/shop',
   server: {
     port: 4200,

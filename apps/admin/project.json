@@ -1,0 +1,31 @@
+{
+  "name": "admin",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/admin/app",
+  "tags": ["npm:private"],
+  "targets": {
+    "build": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/admin",
+        "command": "vite build"
+      },
+      "outputs": ["{workspaceRoot}/apps/admin/dist"]
+    },
+    "dev": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/admin",
+        "command": "react-router dev"
+      }
+    },
+    "preview": {
+      "executor": "nx:run-commands",
+      "options": {
+        "cwd": "apps/admin",
+        "command": "vite preview"
+      }
+    }
+  }
+} 

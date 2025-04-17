@@ -2,7 +2,15 @@
   "name": "@shop-cars-org/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build": "nx build shop",
+    "build:shop": "nx build shop",
+    "build:admin": "nx build admin",
+    "build:all": "npm run build:shop && npm run build:admin && npm run postbuild",
+    "postbuild": "mkdir -p dist && cp -r apps/shop/dist dist/shop && cp -r apps/admin/dist dist/admin",
+    "dev": "nx serve shop",
+    "start": "nx serve shop"
+  },
   "private": true,
   "dependencies": {
     "@react-router/node": "^7.2.0",

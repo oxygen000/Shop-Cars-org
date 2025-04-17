@@ -28,6 +28,9 @@ export function AppNav() {
         <button className="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-md">
           Login
         </button>
+        <button className="bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-md ml-2">
+          Register
+        </button>
       </div>
     </nav>
   );

@@ -1,0 +1,19 @@
+# Dependencies
+node_modules
+
+# Testing
+coverage
+test-output
+
+# Build outputs that aren't needed in the deployment
+.nx/
+tmp/
+out-tsc/
+
+# E2E test apps
+apps/admin-e2e/
+apps/shop-e2e/
+
+# Dev files
+.github/
+.vscode/ 
