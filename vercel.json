@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "npx nx build shop && npx nx build admin && mkdir -p dist/shop dist/admin && cp -r apps/shop/build/client/* dist/shop/ && cp -r apps/admin/build/client/* dist/admin/",
+  "buildCommand": "npx nx build shop && npx nx build admin && mkdir -p dist/shop dist/admin && bash -c 'find apps/shop -type d -name build -o -name dist | xargs ls -la && for src in apps/shop/build apps/shop/dist apps/admin/build apps/admin/dist; do if [ -d \"$src\" ]; then cp -r \"$src/\"* \"dist/${src#apps/}/\"; fi; done'",
   "outputDirectory": "dist",
   "framework": "vite",
   "rewrites": [
