@@ -4,7 +4,7 @@
   "outputDirectory": "dist",
   "framework": "vite",
   "rewrites": [
-    { "source": "/admin/:path*", "destination": "/admin/:path*" },
-    { "source": "/(.*)", "destination": "/shop/:path*" }
+    { "source": "/admin/(.*)", "destination": "/admin/$1" },
+    { "source": "/(.*)", "destination": "/shop/$1" }
   ]
 } 
