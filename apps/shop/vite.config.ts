@@ -14,10 +14,7 @@ export default defineConfig(() => ({
     host: 'localhost',
   },
   plugins: [!process.env.VITEST && reactRouter()],
-  // Uncomment this if you are using workers.
-  // worker: {
-  //  plugins: [ nxViteTsPaths() ],
-  // },
+  // Tailwind is configured via postcss.config.js
   build: {
     outDir: './dist',
     emptyOutDir: true,

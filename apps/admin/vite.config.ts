@@ -4,7 +4,7 @@ import { reactRouter } from '@react-router/dev/vite';
 
 export default defineConfig(() => ({
   root: __dirname,
-  cacheDir: '../node_modules/.vite/admin',
+  cacheDir: '../../node_modules/.vite/admin',
   server: {
     port: 4200,
     host: 'localhost',
@@ -14,10 +14,8 @@ export default defineConfig(() => ({
     host: 'localhost',
   },
   plugins: [!process.env.VITEST && reactRouter()],
-  // Uncomment this if you are using workers.
-  // worker: {
-  //  plugins: [ nxViteTsPaths() ],
-  // },
+  // Tailwind is configured via postcss.config.js
+  // ... existing code ...
   build: {
     outDir: './dist',
     emptyOutDir: true,
